@@ -10,7 +10,8 @@ body {
 }
 
 .left{
-  display: flex;
+  position: relative;
+  flex-direction: column;
 }
 #logo-picture{
   height: 120px;
@@ -21,7 +22,7 @@ body {
   position: absolute;
   top: 200px;
   height: 150px;
-  min-width: 37.5%;
+  min-width: 100%;
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
@@ -46,10 +47,10 @@ body {
   color: white;
   padding: 2px;
 }
-#credit {
+.left > #credit {
   position: absolute;
   display: flex;
-  width: 37.5%;
+  width: 100%;
   color: white;
   align-items: center;
   justify-content: center;
@@ -93,6 +94,9 @@ form > p{
   gap: 15px;
 }
 
+#list{
+  display: flex
+}
 .right > form{
   display: flex;
   flex-direction: column;
@@ -125,7 +129,7 @@ input:focus {
   box-shadow: 5px 5px 10px grey;
 }
 
-input.error:invalid{
+input:invalid{
   outline: 0;
   border: 1.5px solid red;
 }
